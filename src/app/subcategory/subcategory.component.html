@@ -1,0 +1,10 @@
+
+
+
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let sub of subCategories">
+            <button (click)="onClickHandler(sub)" class="btn btn-success btn-block">
+                {{ sub.subName }}
+            </button>
+        </li>
+    </ul>

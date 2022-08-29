@@ -1,0 +1,17 @@
+<div class="">
+    <!-- {{ products | json }} -->
+    <div class="row">
+
+        <div class="col-sm-4" *ngFor="let prod of products">
+            <div class="card" [ngStyle]="cardStyle">
+                <img class="card-img-top" src="http://rjtmobile.com/grocery/images/{{prod.image}}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{ prod.productName }}</h5>
+                    <h3 class="card-text text-secondary">{{ prod.price | currency : "INR" }}</h3>
+                    <p class="card-text">{{ prod.description }}</p>
+                    <a routerLink="details/{{ prod._id }}"  class="btn btn-warning">View Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

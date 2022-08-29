@@ -1,0 +1,14 @@
+<div class="container">
+    <h2 class="text-center">Categories</h2>
+    <div class="row">
+        <div *ngFor="let category of categories" class="card col-2" [ngStyle]="cardStyle">
+            <img src="http://rjtmobile.com/grocery/images/{{category.catImage}}">
+            <div class="card-body row pb-0">
+                <h3 class="card-title text-secondary">{{ category.catName }}</h3>
+            </div>
+            <div class="row">
+                <button (click)="onClickHandler(category)" class="btn btn-warning btn-block">View Details</button>
+            </div>
+        </div>
+    </div>
+</div>
